@@ -30,7 +30,7 @@ namespace Henry.EditorKit.BuiltInComponent
             globalEndpoint = EditorPrefs.GetString(IPKey, string.Empty);
         }
 
-        public void OnGUI(Rect rect)
+        void IComponent.OnGUI(Rect rect)
         {
             EditorGUI.BeginChangeCheck();
             var currentMode = EditorSettings.cacheServerMode;
